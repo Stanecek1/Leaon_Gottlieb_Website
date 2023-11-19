@@ -1,0 +1,116 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  overflow-x: hidden;
+} */
+
+.webgl {
+  /* position: absolute;
+  top:0;
+  left:0;
+  z-index: 1; */
+}
+
+/* nav {
+  color: white;
+  z-index: 2;
+  position: relative;
+  padding: 4rem 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.title {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-size: 3rem;
+  left:  50%;
+  top: 80%;
+  transform: translate(-50%, -75%);
+} */
+
+
+@font-face {
+  font-family: 'matesc';
+  src: url('./fonts/MateSC-Regular.ttf') format('truetype');
+}
+
+.black{
+  background-color: black;
+  
+}
+
+.title{
+  /* text-decoration: underline; */
+  padding-bottom: 20px;
+  font-family: matesc;
+  font-size: 60px;
+  font-weight: 400;
+  color:  white;
+}
+
+.first-paragragh{
+  font-size: 15px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.vnb__menu-options__option__link{
+  color: white;
+  font-size: 14px;
+}
+
+.vbn{
+  display: grid;
+  justify-content: center;
+}
+
+#main-navbar{
+  display: grid;
+  justify-content: center;
+}
+
+.leonImg{
+  height: 525px;
+  width: 525px;
+}
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.mainHome{
+  height: 100vh;
+}
+
+.fancy{
+  font-family: matesc;
+  font-size: 70px;
+  font-weight: 400;
+}
+.home-button{
+  background-color: rgb(238, 238, 238);
+  font-family: matesc;
+  font-size: 25px;
+  font-weight: 500;
+}
