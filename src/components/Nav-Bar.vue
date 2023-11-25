@@ -46,8 +46,8 @@
             },
             {
                 type: "link",
-                text: "Content",
-                path: { name: "content"},
+                text: "Contact",
+                path: { name: "contact"},
             },
             {
                 type: "link",
