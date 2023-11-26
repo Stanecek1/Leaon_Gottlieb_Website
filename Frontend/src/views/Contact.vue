@@ -1,13 +1,34 @@
 <script setup>
-
+    import fetch from 'cross-fetch';
     import { ref } from 'vue'
 
     const message = ref('')
     const from = ref('')
 
-    function submitEmail () {
-        console.log(from.value)
-        console.log(message.value)
+    async function sendMail() {
+        //function to get the art data json file from the server and return it as array of objects
+        try{
+            await fetch("http://localhost:8080/sendMail", {
+                method: 'POST',
+                body: JSON.stringify({from: from.value, message: message.value}),
+                headers: {
+                "Content-Type": "application/json",
+                },
+            })
+            .then(res => res.json())
+            .then(function(response){
+                if (response.sent){
+                    console.log('sent')
+                }
+                else{
+                    console.log('failure')
+                }
+            });
+        }
+        catch (error ) {
+            console.log(error)
+        }
+        
     }
 </script>
 
@@ -34,7 +55,7 @@
                     <label for="exampleInputPassword1">Message </label>
                     <textarea v-model="message" type="text" class="form-control" id="message" placeholder="Your Message" ></textarea>
                 </div>
-                <button v-on:click="submitEmail" class="btn btn-primary mt-2">Send Message</button>
+                <button v-on:click="sendMail" class="btn btn-primary mt-2">Send Message</button>
 
         </div>
     </div>
