@@ -7,7 +7,7 @@ import Books from './Books.vue'
       <div class="text-center bg-red text-black mx-0">
         <div class="row pt-5 pb-5 mx-0 row justify-content-center mainHome bg-red">
           <div class="col-4 my-auto">
-            <img class="leonImg" src="../assets/images/Leon.PNG"/>
+            <img class="leonImg" src="images/Leon.PNG"/>
           </div>
           <div class="col-6 text-black first-paragragh my-auto">
             <h1 class="title text-black mb-0" id="title">Leon S. Gottlieb, Esq</h1>

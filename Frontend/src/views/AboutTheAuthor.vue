@@ -19,7 +19,7 @@ export default {
       <div class="row justify-content-center mt-5">
         <div class="col-9  d-flex justify-content-center">
           <div>
-            <img class="ml-auto" src="../assets/images/bio1.PNG" style="height: 500px;" alt="">
+            <img class="ml-auto" src="images/bio1.PNG" style="height: 500px;" alt="">
           </div>
           <div class="my-auto ms-5">
             <h1 class="text-left py-5 fancy">Leon S. Gottlieb</h1>
@@ -36,7 +36,7 @@ export default {
             <p class="me-5">In search of a better way of life, Leon resigned his position, and moved his young family to California where he represented many of the Wall St. brokerage houses as a trial attorney. After eighteen years of loving his law practice with a success rate of 90% +, boredom set in.</p>
           </div>
           <div>
-            <img class="ml-auto" src="../assets/images/bio2.PNG" style="height: 500px;" alt="">
+            <img class="ml-auto" src="images/bio2.PNG" style="height: 500px;" alt="">
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ export default {
       <div class="row justify-content-center mb-5">
         <div class="col-9 d-flex justify-content-center">
           <div>
-            <img class="ml-auto" src="../assets/images/bio3.PNG" style="height: 500px;" alt="">
+            <img class="ml-auto" src="images/bio3.PNG" style="height: 500px;" alt="">
           </div>
           <div class="my-auto mx-5">
             <p>In 1979 Leon started a computer company to monitor, control and vend copies on copy machines. That company developed the “University One-Card System,” which over the years grew to provide students on college and university campuses with the ability to use a photo ID card for every campus function. As a debit card, the system handled all purchases on and even off campus. The same card provided controlled entry to residences, classes, elevators, parking and events acting as a card key.  Food plans, food, books and other cash purchases, as well as security filled all the needs of the campuses. The company was sold to a public company in 2007  and continues to provide for the needs of numerous college and university campuses.</p>
