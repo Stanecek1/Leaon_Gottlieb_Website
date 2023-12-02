@@ -1,16 +1,13 @@
-version: "3.7"
-
+version: '3.4'
 services:
-  vue-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: vue-app
-    restart: always
-    ports:
-      - "8080:8080"
-    networks:
-      - vue-network
-networks:
-  vue-network:
-    driver: bridge
+    react-nginx-app:
+      stdin_open: true
+      build:
+        context: .
+        dockerfile: Dockerfile
+      expose:
+        - 8080
+      ports:
+        - 8080:80
+      environment:
+          - CHOKIDAR_USEPOLLING=true
