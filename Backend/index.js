@@ -21,8 +21,12 @@ app.post('/sendMail', async (req, res) => {
     console.log('test')
     console.log(API_KEY)
     console.log('Got body:', req.body);
-    sendEmail(req.body.from, req.body.message)
-    res.send({'sent': true,  'messaage': 'Email Sent'});
+    // const sent = await sendEmail(req.body.from, req.body.message)
+    // console.log(test)
+    // if (sent) {
+
+    // }
+    // res.send({'sent': true,  'messaage': 'Email Sent'});
 })
 
 //TODO change 'TO' to leons gmail the one card one
@@ -46,12 +50,13 @@ async function sendEmail(name, message) {
   
     return axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        return true 
       })
       .catch(function (error) {
         console.log(error);
+        return false
       });
   
   }
 
-app.listen(8080, () => console.log("Listening on port 8080"));
+app.listen(8000, () => console.log("Listening on port 8000"));
