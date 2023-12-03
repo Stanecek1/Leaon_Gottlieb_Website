@@ -17,7 +17,8 @@ services:
       build:
         context: ./Backend
         dockerfile: Dockerfile
-
+      env_file:
+          - ./.env
       container_name: api
       expose:
         - "4000"

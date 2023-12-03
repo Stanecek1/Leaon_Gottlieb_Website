@@ -8,7 +8,7 @@
     async function sendMail() {
         //function to get the art data json file from the server and return it as array of objects
         try{
-            await fetch("http://localhost:4000/sendMail", {
+            await fetch("http://127.0.0.1:4000/sendMail", {
                 method: 'POST',
                 body: JSON.stringify({from: from.value, message: message.value}),
                 headers: {

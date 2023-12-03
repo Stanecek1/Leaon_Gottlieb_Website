@@ -21,12 +21,13 @@ app.post('/sendMail', async (req, res) => {
     console.log('test')
     console.log(API_KEY)
     console.log('Got body:', req.body);
-    // const sent = await sendEmail(req.body.from, req.body.message)
-    // console.log(test)
-    // if (sent) {
-
-    // }
-    // res.send({'sent': true,  'messaage': 'Email Sent'});
+    const sent = await sendEmail(req.body.from, req.body.message)
+    if (sent) {
+      res.send({'sent': true,  'messaage': 'Email Sent'});
+    }
+    else{
+      res.send({'sent': false,  'messaage': 'Email Failed To Send'});
+    } 
 })
 
 //TODO change 'TO' to leons gmail the one card one
