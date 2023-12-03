@@ -1,7 +1,7 @@
 FROM node:lts-alpine
-WORKDIR /app
+WORKDIR /usr/app/api
 COPY package.json ./
 RUN npm install
-COPY . /app
-EXPOSE 8000
-CMD [ "node", "index.js" ]
+COPY . .
+# EXPOSE 4000
+# CMD [ "node", "index.js" ]

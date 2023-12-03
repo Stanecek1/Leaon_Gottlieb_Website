@@ -1,0 +1,28 @@
+version: '3.4'
+services:
+    web:
+      stdin_open: true
+      build:
+        context: ./Frontend
+        dockerfile: Dockerfile
+      expose:
+        - 8080
+      ports:
+        - 8080:80
+      environment:
+          - CHOKIDAR_USEPOLLING=true
+    api:
+      environment: 
+        - NODE_ENV=development
+      build:
+        context: ./Backend
+        dockerfile: Dockerfile
+
+      container_name: api
+      expose:
+        - "4000"
+      ports: 
+        - "4000:4000"
+      command: node index.js
+      
+
