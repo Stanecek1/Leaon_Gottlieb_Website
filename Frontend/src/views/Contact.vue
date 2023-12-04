@@ -4,10 +4,14 @@
 
     const message = ref('')
     const from = ref('')
+    const loading = ref(false)
+    const sent = ref(false)
+    const errorMessage = ref('')
 
     async function sendMail() {
         //function to get the art data json file from the server and return it as array of objects
         try{
+            loading.value = true
             await fetch("http://127.0.0.1:4000/sendMail", {
                 method: 'POST',
                 body: JSON.stringify({from: from.value, message: message.value}),
@@ -19,14 +23,20 @@
             .then(function(response){
                 if (response.sent){
                     console.log('sent')
+                    sent.value = true
                 }
                 else{
                     console.log('failure')
+                    errorMessage.value = 'Message failed to send. Try emailing'
                 }
+                loading.value = false
             });
         }
         catch (error ) {
             console.log(error)
+            console.log('failure')
+            errorMessage.value = 'Message failed to send. Try emailing'
+            loading.value = false
         }
         
     }
@@ -40,23 +50,35 @@
     <div class="row justify-content-center">
         <div class="col-5 text-center" >
             <p>Your comments and suggestions are always welcome. My readers are my friends, and as I always knew I owed my legal clients the best possible representation, I also know I owe my readers stories you can enjoy. If you enjoy my books, please tell your friends, so they can join our reader’s family. I enjoy hearing from new as well as old friends.</p>
-            <h1>Leon1card@gmail.com</h1>
+            <p>Feel free to email me directly at </p>
+            <h2><strong>Leon1card@gmail.com</strong></h2>
+            <p>or </p>
+            <p>fill out the form below</p>
         </div>
     </div>
-
-    <div class="pt-5 row justify-content-center">
-        <div class="col-5">
-
-                <div class="form-group">
-                    <label for="exampleInputEmail1">From</label>
-                    <input v-model="from" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Message </label>
-                    <textarea v-model="message" type="text" class="form-control" id="message" placeholder="Your Message" ></textarea>
-                </div>
-                <button v-on:click="sendMail" class="btn btn-primary mt-2">Send Message</button>
-
+    <div v-if="loading" class="row justify-content-center">
+        <div class="spinner-border" role="status">
         </div>
     </div>
+    <div v-else class="row ">
+            <div v-if="sent" class="pt-2 row justify-content-center">Your message has been sent. Thank you</div>
+            <div v-else class="pt-2 row justify-content-center ">
+                <div class="col-5 gray-bg">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">From</label>
+                        <input style="width: 350px;" v-model="from" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Message </label>
+                        <textarea v-model="message" type="text" class="form-control" id="message" placeholder="Your Message" ></textarea>
+                    </div>
+                    <button v-on:click="sendMail" class="btn btn-primary my-2">Send Message</button>
+                    <p class="text-danger" v-if="errorMessage" v-text="errorMessage"></p>
+                </div>
+            </div>
+
+
+    </div>
+
+
 </template>
