@@ -114,3 +114,8 @@ nav ul {
   font-size: 25px;
   font-weight: 500;
 }
+
+.gray-bg {
+  background-color: rgb(240, 240, 240);
+  border: solid rgb(196, 196, 196) 1px;
+}
