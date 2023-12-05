@@ -23,13 +23,14 @@ const router = createRouter({
     { path: '/home', name: 'home', component: Home },
     { path: '/books', name: 'books', component: Books },
     { path: '/about', name: 'about', component: AboutTheAuthor },
-    { path: '/share', name: 'share', component: AboutTheAuthor },
     { path: '/contact', name: 'contact', component: Contact },
     { path: '/shop', name: 'shop', component: AboutTheAuthor },
     { path: '/excerpts', name: 'excerpts', component: Excerpts },
     { path: "/:pathMatch(.*)*", name: 'not-found', component: PageNotFound}
   ],
 });
+
+    // { path: '/share', name: 'share', component: AboutTheAuthor },
 
 app.use(router);
 

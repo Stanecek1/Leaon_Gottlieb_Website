@@ -39,11 +39,11 @@
                 text: "About",
                 path: { name: "about"},
             },
-            {
-                type: "link",
-                text: "Share",
-                path: { name: "share"},
-            },
+            // {
+            //     type: "link",
+            //     text: "Share",
+            //     path: { name: "share"},
+            // },
             {
                 type: "link",
                 text: "Contact",
