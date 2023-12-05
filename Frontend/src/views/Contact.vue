@@ -4,6 +4,7 @@
 
     const message = ref('')
     const from = ref('')
+    const email = ref('')
     const loading = ref(false)
     const sent = ref(false)
     const errorMessage = ref('')
@@ -14,7 +15,7 @@
             loading.value = true
             await fetch("http://127.0.0.1:4000/sendMail", {
                 method: 'POST',
-                body: JSON.stringify({from: from.value, message: message.value}),
+                body: JSON.stringify({from: from.value, message: message.value, email:email.value}),
                 headers: {
                 "Content-Type": "application/json",
                 },
@@ -65,11 +66,15 @@
             <div v-else class="pt-2 row justify-content-center ">
                 <div class="col-5 gray-bg">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">From</label>
+                        <label for="exampleInputEmail1">Your Name</label>
                         <input style="width: 350px;" v-model="from" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Message </label>
+                        <label for="exampleInputEmail1">Your Email</label>
+                        <input style="width: 350px;" v-model="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Message</label>
                         <textarea v-model="message" type="text" class="form-control" id="message" placeholder="Your Message" ></textarea>
                     </div>
                     <button v-on:click="sendMail" class="btn btn-primary my-2">Send Message</button>

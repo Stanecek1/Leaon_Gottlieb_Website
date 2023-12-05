@@ -21,7 +21,7 @@ app.post('/sendMail', async (req, res) => {
     console.log('test')
     console.log(API_KEY)
     console.log('Got body:', req.body);
-    const sent = await sendEmail(req.body.from, req.body.message)
+    const sent = await sendEmail(req.body.from, req.body.message, req.body.email)
     if (sent) {
       res.send({'sent': true,  'messaage': 'Email Sent'});
     }
@@ -31,12 +31,12 @@ app.post('/sendMail', async (req, res) => {
 })
 
 //TODO change 'TO' to leons gmail the one card one
-async function sendEmail(name, message) {
+async function sendEmail(name, message, from) {
     const data = JSON.stringify({
       "Messages": [{
         "From": {"Email": EMAIL, "Name": name},
         "To": [{"Email": TO_EMAIL, "Name": 'Leon Gottlieb'}],
-        "Subject": 'From Leon Gottlieb Website',
+        "Subject": 'From ' + from,
         "TextPart": message
       }]
     });
