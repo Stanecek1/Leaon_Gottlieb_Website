@@ -12,12 +12,13 @@ const TO_EMAIL = process.env.TO_EMAIL
 
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+var jsonParser = bodyParser.json()
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 
 
-app.post('/sendMail', async (req, res) => {
+app.post('/sendMail', jsonParser, async (req, res) => {
     console.log('test')
     console.log(API_KEY)
     console.log('Got body:', req.body);
