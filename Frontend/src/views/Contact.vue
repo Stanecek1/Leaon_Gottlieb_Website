@@ -13,7 +13,7 @@
         //function to get the art data json file from the server and return it as array of objects
         try{
             loading.value = true
-            await fetch("http://127.0.0.1:4000/sendMail", {
+            await fetch("https://leongottliebwebsitebackend-5hh92ro0.b4a.run/sendMail/", {
                 method: 'POST',
                 body: JSON.stringify({from: from.value, message: message.value, email:email.value}),
                 headers: {
