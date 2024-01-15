@@ -2,7 +2,7 @@
     <section>
       <div class="text-center bg-red text-black mx-0">
         <div class="row pt-5 pb-5 mx-0 row justify-content-center mainHome bg-red">
-          <div class="col-4 my-auto">
+          <div class="col-4 my-auto fade-in-image">
             <img class="leonImg" src="images/Leon.PNG"/>
           </div>
           <div class="col-6 text-black first-paragragh my-auto">

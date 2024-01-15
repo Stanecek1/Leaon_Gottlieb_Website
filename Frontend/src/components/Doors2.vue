@@ -53,6 +53,24 @@ let door1Animations = []
 let controls = null;
 let light3 = null;
 
+const manager = new THREE.LoadingManager();
+manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+	console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+};
+
+manager.onLoad = function ( ) {
+	console.log( 'Loading complete!');
+  createText()
+};
+
+manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+	console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+};
+
+manager.onError = function ( url ) {
+	console.log( 'There was an error loading ' + url );
+};
+
 const SceneSetUp = (className) => {
   scene = new THREE.Scene();
   getWindowSizes();
@@ -61,7 +79,6 @@ const SceneSetUp = (className) => {
   Lighting();
   controlSetUp();
   renderer.setAnimationLoop(animate);
-  createText()
 }
 
 

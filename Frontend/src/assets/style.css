@@ -119,3 +119,10 @@ nav ul {
   background-color: rgb(240, 240, 240);
   border: solid rgb(196, 196, 196) 1px;
 }
+
+.fade-in-image { animation: fadeIn 2s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
