@@ -118,7 +118,7 @@ function createText() {
 
 //load model
 const doorSetup = () => {
-    const loader = new GLTFLoader();
+    const loader = new GLTFLoader(manager);
     loader.load( path, function ( gltf ) {
       gltf.scene.position.set(0,-5,1.5)
       scene.add(gltf.scene)

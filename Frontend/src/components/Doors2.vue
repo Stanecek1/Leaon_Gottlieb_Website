@@ -116,19 +116,23 @@ function createText() {
 
 //load model
 const doorSetup = () => {
-    const loader = new GLTFLoader();
+    const loader = new GLTFLoader(manager);
     loader.load( path, function ( gltf ) {
       gltf.scene.position.set(0,-5,1.5)
       scene.add(gltf.scene)
       scene.background = new THREE.Color(300,300,300);
+      //animation section
       mixer = new THREE.AnimationMixer(gltf.scene);
       const clips = gltf.animations;
+      //find animations in blender export
       const RightDoorOpen = THREE.AnimationClip.findByName(clips, 'ArmatureAction')
       const LeftDoorOpen = THREE.AnimationClip.findByName(clips, 'Armature.001Action')
       const BookScale = THREE.AnimationClip.findByName(clips, 'BookAction.001')
+      //set animations as actions
       const actionRightDoor = mixer.clipAction(RightDoorOpen)
       const actionLeftDoor = mixer.clipAction(LeftDoorOpen)
       const actionBook = mixer.clipAction(BookScale)
+       //set animations to only play once and stop at the end instead of back at beggining
       actionRightDoor.setLoop(THREE.LoopOnce)
       actionRightDoor.clampWhenFinished = true;
       actionLeftDoor.setLoop(THREE.LoopOnce)
@@ -222,71 +226,3 @@ function animate() {
   <canvas  @click="Open()" :class="className" ref="canvas" style="width: 100%; height: 100%;"></canvas>
 </template>
 
-<style scoped>
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body,html{
-  overflow-x: hidden;
-}
-
-/* .webgl {
-  width: 100%;
-} */
-
-nav {
-  color: white;
-  z-index: 2;
-  position: relative;
-  padding: 4rem 8rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 4rem;
-}
-
-.title {
-  color: white;
-  z-index: 2;
-  position: absolute;
-  font-size: 3rem;
-  left:  50%;
-  top: 80%;
-  transform: translate(-50%, -75%);
-}
-/* h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-} */
-</style>

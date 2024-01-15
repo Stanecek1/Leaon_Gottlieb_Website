@@ -53,8 +53,6 @@ let door1Animations = []
 let controls = null;
 let light3 = null;
 
-
-
 const manager = new THREE.LoadingManager();
 manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
 	console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
