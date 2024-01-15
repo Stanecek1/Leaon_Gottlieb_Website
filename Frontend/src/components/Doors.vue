@@ -3,9 +3,11 @@ import { ref, onMounted } from 'vue';
 import * as THREE  from 'three';
 import '../assets/style.css';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+
 // import { gsap } from 'gsap';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-
+import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
+import {TextGeometry} from 'three/addons/geometries/TextGeometry.js';
 export default {
   
   props: {
@@ -15,7 +17,7 @@ export default {
   },
   methods: {
     Open() {
-
+        scene.remove(textMesh1)
         door1Animations.forEach(element => {
         element.play()
       });
@@ -38,6 +40,7 @@ export default {
 }
 
 let size = null
+let textMesh1, textGeo, materials;
 let path = null
 let scene = null;
 let camera = null;
@@ -58,6 +61,7 @@ const SceneSetUp = (className) => {
   Lighting();
   controlSetUp();
   renderer.setAnimationLoop(animate);
+  createText();
 }
 
 
@@ -70,6 +74,29 @@ const controlSetUp = () => {
   // controls.autoRotateSpeed = 5;
 }
 
+function createText() {
+  const loader = new FontLoader();
+  loader.load("https://threejs.org/examples/fonts/helvetiker_regular.typeface.json", function ( response ) {
+    textGeo = new TextGeometry( 'Click To Reveal', {
+        font:response,
+        size: .4,
+        height: .25,
+        
+      } );
+
+    materials = [
+        new THREE.MeshPhongMaterial( { color: 'Black', flatShading: false,  } ), // front
+        new THREE.MeshPhongMaterial( { color: 0xffffff } ) // side
+      ];
+    textMesh1 = new THREE.Mesh( textGeo, materials );
+
+    textMesh1.position.x = -2;
+    textMesh1.position.y = -.25;
+    textMesh1.position.z = 10;
+    scene.add(textMesh1)
+  } );
+}
+
 //load model
 const doorSetup = () => {
     const loader = new GLTFLoader();
@@ -77,14 +104,18 @@ const doorSetup = () => {
       gltf.scene.position.set(0,-5,1.5)
       scene.add(gltf.scene)
       scene.background = new THREE.Color(300,300,300);
+      //animation section
       mixer = new THREE.AnimationMixer(gltf.scene);
       const clips = gltf.animations;
+      //find animations in blender export
       const RightDoorOpen = THREE.AnimationClip.findByName(clips, 'ArmatureAction')
       const LeftDoorOpen = THREE.AnimationClip.findByName(clips, 'Armature.001Action')
       const BookScale = THREE.AnimationClip.findByName(clips, 'BookAction.001')
+      //set animations as actions
       const actionRightDoor = mixer.clipAction(RightDoorOpen)
       const actionLeftDoor = mixer.clipAction(LeftDoorOpen)
       const actionBook = mixer.clipAction(BookScale)
+      //set animations to only play once and stop at the end instead of back at beggining
       actionRightDoor.setLoop(THREE.LoopOnce)
       actionRightDoor.clampWhenFinished = true;
       actionLeftDoor.setLoop(THREE.LoopOnce)

@@ -5,6 +5,8 @@ import '../assets/style.css';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 // import { gsap } from 'gsap';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
+import {TextGeometry} from 'three/addons/geometries/TextGeometry.js';
 
 export default {
   
@@ -15,7 +17,7 @@ export default {
   },
   methods: {
     Open() {
-
+        scene.remove(textMesh1)
         door1Animations.forEach(element => {
         element.play()
       });
@@ -37,7 +39,8 @@ export default {
   },
 }
 
-let size = null
+let size = null;
+let textMesh1, textGeo, materials;
 let path = null
 let scene = null;
 let camera = null;
@@ -58,6 +61,7 @@ const SceneSetUp = (className) => {
   Lighting();
   controlSetUp();
   renderer.setAnimationLoop(animate);
+  createText()
 }
 
 
@@ -68,6 +72,29 @@ const controlSetUp = () => {
   // controls.enableZoom = true;
   // controls.autoRotate = true;
   // controls.autoRotateSpeed = 5;
+}
+
+function createText() {
+  const loader = new FontLoader();
+  loader.load("https://threejs.org/examples/fonts/helvetiker_regular.typeface.json", function ( response ) {
+    textGeo = new TextGeometry( 'Click To Reveal', {
+        font:response,
+        size: .4,
+        height: .25,
+        
+      } );
+
+    materials = [
+        new THREE.MeshPhongMaterial( { color: 'Black', flatShading: false,  } ), // front
+        new THREE.MeshPhongMaterial( { color: 0xffffff } ) // side
+      ];
+    textMesh1 = new THREE.Mesh( textGeo, materials );
+
+    textMesh1.position.x = -2;
+    textMesh1.position.y = -.25;
+    textMesh1.position.z = 10;
+    scene.add(textMesh1)
+  } );
 }
 
 //load model
