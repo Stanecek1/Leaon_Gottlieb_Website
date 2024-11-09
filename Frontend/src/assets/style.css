@@ -61,15 +61,15 @@ nav ul {
   /* text-decoration: underline; */
   padding-bottom: 20px;
   font-family: matesc;
-  font-size: 60px;
+  font-size: 35px;
   font-weight: 400;
   color:  white;
 }
 
 .first-paragragh{
-  font-size: 15px;
-  padding-right: 100px;
-  padding-left: 100px;
+  font-size: 14px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .vnb__menu-options__option__link{
@@ -88,8 +88,8 @@ nav ul {
 }
 
 .leonImg{
-  height: 525px;
-  width: 525px;
+  height: 400px;
+  width: 400px;
 }
 
 .row{
@@ -99,9 +99,6 @@ nav ul {
   padding-right: 0px;
 }
 
-.mainHome{
-  height: 100vh;
-}
 
 .fancy{
   font-family: matesc;

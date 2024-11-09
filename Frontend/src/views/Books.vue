@@ -5,7 +5,7 @@
 </script>
 <template>
     <div class="py-0 my-0">
-        <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(255, 255, 255); font-size: 90px;">Books </h1>
+        <!-- <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(255, 255, 255); font-size: 90px;">Books </h1> -->
         <div class="row justify-content-center px-0 mx-0 bg-white text-black">
             <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(236, 236, 236); margin-top: -7px">Impossible</h1>
             <div class="col-12 mx-0 my-0 px-0 py-0">
