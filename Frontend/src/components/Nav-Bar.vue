@@ -22,7 +22,7 @@
             ariaLabelMainNav: "Main Navigation",
             tooltipAnimationType: "shift-away",
             tooltipPlacement: "bottom",
-            background:'#661c23',
+            background:'#000000',
             menuOptionsLeft: [
             {
                 type: "link",
@@ -114,16 +114,15 @@
   <style lang="scss">
     .vnb {
         display: grid;
-        justify-content: center;
-        background: rgb(27, 27, 27) !important;
+        justify-content: top;
+        background: rgb(245, 245, 245) !important;
+        height: 5vh;
         border-bottom: solid black 1px;
-        .button-red {
-        // background: #ff3b30;
-  
-        &:hover {
-          background: darken(#ff3b30, 10%);
-        }
+
       }
+    .vnb a {
+      color: black;
     }
+    
 
   </style>

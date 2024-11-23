@@ -61,20 +61,31 @@ nav ul {
   /* text-decoration: underline; */
   padding-bottom: 20px;
   font-family: matesc;
-  font-size: 35px;
+  font-size: 60px;
   font-weight: 400;
   color:  white;
+  line-height: normal;
 }
 
 .first-paragragh{
   font-size: 14px;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right:3%;
+  padding-left: 3%;
+  /* border-radius: 50px; */
+  /* border: solid rgb(177, 177, 177) 1px; */
 }
 
 .vnb__menu-options__option__link{
   color: white;
   font-size: 14px;
+}
+
+.nav-title{
+  font-size: 25px;
+  font-family: matesc;
+}
+.teal{
+  background-color: #e5e8e5;
 }
 
 .vbn{
@@ -85,11 +96,12 @@ nav ul {
 #main-navbar{
   display: grid;
   justify-content: center;
+  padding-top: 0
 }
 
 .leonImg{
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
 }
 
 .row{

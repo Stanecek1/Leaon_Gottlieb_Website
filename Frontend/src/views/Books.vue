@@ -7,11 +7,10 @@
     <div class="py-0 my-0">
         <!-- <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(255, 255, 255); font-size: 90px;">Books </h1> -->
         <div class="row justify-content-center px-0 mx-0 bg-white text-black">
-            <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(236, 236, 236); margin-top: -7px">Impossible</h1>
             <div class="col-12 mx-0 my-0 px-0 py-0">
                 <Doors :size="2" :className="'webgl'" :path="'/doors_Impossible.glb'" />
             </div>
-            
+            <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(236, 236, 236); margin-top: -7px">Impossible</h1>
             <div class="row justify-content-center my-auto py-2">
                 <div class="col-6 text-center pt-5">
                     <p><strong>Impossible</strong> is the story of a college student accused of raping an old girlfriend is Mr. Gottlieb’s  first book. If the student, (David) was telling the truth, how did his sperm get to be found in her vagina, and his blood on her bed post? This courtroom thriller will keep you wondering how the evidence got where it was. Was David lying or was there more than meets the eye. This book will be listed as fiction, but you decide if is really fiction or based on truth, but then again isn’t most fiction based on truth?</p>
@@ -44,7 +43,7 @@
         </div>
     </div>
 
-    <div>
+    <!-- <div>
         <div class="row justify-content-center px-0 mx-0 bg-white text-black">
             <h1 class="text-center mb-0 py-4 fancy" style="background-color: rgb(236, 236, 236); margin-top: -7px">Hysteria</h1>
             <div class="col-12 mx-0 my-0 px-0 py-0">
@@ -57,7 +56,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     
 

@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
     import fetch from 'cross-fetch';
     import { ref } from 'vue'
 
@@ -41,7 +41,7 @@
         }
         
     }
-</script>
+</script> -->
 
 
 <template>
@@ -53,15 +53,15 @@
             <p>Your comments and suggestions are always welcome. My readers are my friends, and as I always knew I owed my legal clients the best possible representation, I also know I owe my readers stories you can enjoy. If you enjoy my books, please tell your friends, so they can join our reader’s family. I enjoy hearing from new as well as old friends.</p>
             <p>Feel free to email me directly at </p>
             <h2><strong>Leon1card@gmail.com</strong></h2>
-            <p>or </p>
-            <p>fill out the form below</p>
+            <!-- <p>or </p>
+            <p>fill out the form below</p> -->
         </div>
     </div>
-    <div v-if="loading" class="row justify-content-center">
+    <!-- <div v-if="loading" class="row justify-content-center">
         <div class="spinner-border" role="status">
         </div>
-    </div>
-    <div v-else class="row ">
+    </div> -->
+    <!-- <div v-else class="row ">
             <div v-if="sent" class="pt-2 row justify-content-center">Your message has been sent. Thank you</div>
             <div v-else class="pt-2 row justify-content-center ">
                 <div class="col-5 gray-bg">
@@ -81,9 +81,7 @@
                     <p class="text-danger" v-if="errorMessage" v-text="errorMessage"></p>
                 </div>
             </div>
-
-
-    </div>
+    </div> -->
 
 
 </template>
