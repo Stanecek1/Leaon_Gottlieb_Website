@@ -7,17 +7,15 @@ import '../node_modules/bootstrap-vue/dist/bootstrap-vue.css';
 
 </script>
 
-<template >
+<template>
   <!-- <div class="container"> -->
     <section class="main-navbar-section">
-      <div style="height: 5vh; background-color: rgb(245, 245, 245) !important;" class="d-flex justify-content-center">
+      <div style="height: 5vh; padding-left: 30px; background: rgb(245, 245, 245) !important;" class="d-flex justify-content-center">
         <p class= "nav-title my-auto">Leon S. Gottlieb, Esq</p>
       </div>
       <NavBar/>
     </section>
   <router-view></router-view>
-
-
 </template>
 
 <style scoped>
