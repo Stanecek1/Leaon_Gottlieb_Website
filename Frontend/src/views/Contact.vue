@@ -45,11 +45,11 @@
 
 
 <template>
-    <div class="py-0 my-0">
+    <!-- <div class="py-0 my-0">
         <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(255, 255, 255); font-size: 90px;">Contact</h1>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-5 text-center" >
+    </div> -->
+    <div class="row justify-content-center" style="margin-top: 5rem;">
+        <div class="col-5 text-center"  style="margin-top: auto; margin-bottom: auto;">
             <p>Your comments and suggestions are always welcome. My readers are my friends, and as I always knew I owed my legal clients the best possible representation, I also know I owe my readers stories you can enjoy. If you enjoy my books, please tell your friends, so they can join our reader’s family. I enjoy hearing from new as well as old friends.</p>
             <p>Feel free to email me directly at </p>
             <h2><strong>Leon1card@gmail.com</strong></h2>

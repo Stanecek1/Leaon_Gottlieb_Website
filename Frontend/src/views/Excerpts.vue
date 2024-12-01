@@ -3,7 +3,7 @@
 </script>
 <template>
     <div style="">
-        <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(255, 255, 255); font-size: 90px;">Excerpts</h1>
+        <!-- <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(255, 255, 255); font-size: 90px;">Excerpts</h1> -->
 
         <div style="display: flex; width: 80vw;  justify-self: center;">
             <div class="container">
