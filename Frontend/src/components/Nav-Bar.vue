@@ -73,6 +73,6 @@
     .vnb a {
       color: black;
     }
-    
 
+    
   </style>

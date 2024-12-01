@@ -61,16 +61,14 @@ nav ul {
   /* text-decoration: underline; */
   padding-bottom: 20px;
   font-family: matesc;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 400;
   color:  white;
   line-height: normal;
 }
 
 .first-paragragh{
-  font-size: 14px;
-  padding-right:3%;
-  padding-left: 3%;
+  font-size: 17px;
   /* border-radius: 50px; */
   /* border: solid rgb(177, 177, 177) 1px; */
 }
@@ -100,8 +98,8 @@ nav ul {
 }
 
 .leonImg{
-  height: 500px;
-  width: 500px;
+  height: 380px;
+  width: 380px;
 }
 
 .row{
@@ -127,6 +125,9 @@ nav ul {
 .gray-bg {
   background-color: rgb(240, 240, 240);
   border: solid rgb(196, 196, 196) 1px;
+}
+body{
+  display: contents;
 }
 
 .fade-in-image { animation: fadeIn 2s; }
