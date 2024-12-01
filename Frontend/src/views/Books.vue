@@ -25,11 +25,10 @@
 
     <div>
         <div class="row justify-content-center px-0 mx-0 bg-white text-black">
-            <h1 class="text-center mb-0  py-4 fancy"  style="background-color: rgb(236, 236, 236); margin-top: -7px">Homeless</h1>
             <div class="col-12 mx-0 my-0 px-0 py-0">
                 <Doors2 :size="2" :className="'webgl2'" :path="'/doors_Homeless.glb'" />
             </div>
-            
+            <h1 class="text-center mb-0  py-4 fancy"  style="background-color: rgb(236, 236, 236); margin-top: -7px">Homeless</h1>
             <div class="col-7 my-auto=">
                 <div class="text-center p-5">
                     <p>Homeless depicts the life of each of seven such people from their births through their fall into homelessness. Each, from divergent backgrounds, has a story of a life left behind, a story as varied as their names. . One beta reader said, “You’ll cry and cheer and enjoy each story.”</p>

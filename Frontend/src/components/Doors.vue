@@ -96,7 +96,7 @@ function createText() {
   loader.load("https://threejs.org/examples/fonts/helvetiker_regular.typeface.json", function ( response ) {
     textGeo = new TextGeometry( 'Click To Reveal', {
         font:response,
-        size: .4,
+        size: .3,
         height: .25,
         
       } );
@@ -107,7 +107,7 @@ function createText() {
       ];
     textMesh1 = new THREE.Mesh( textGeo, materials );
 
-    textMesh1.position.x = -2;
+    textMesh1.position.x = -1.5;
     textMesh1.position.y = -.25;
     textMesh1.position.z = 10;
     scene.add(textMesh1)

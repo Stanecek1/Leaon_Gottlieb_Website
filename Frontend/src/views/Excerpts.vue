@@ -5,9 +5,9 @@
     <div style="">
         <!-- <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(255, 255, 255); font-size: 90px;">Excerpts</h1> -->
 
-        <div style="display: flex; width: 80vw;  justify-self: center;">
-            <div class="container">
-                <h1 class="text-center">Impossible</h1>
+        <div style="display: flex; width: 80vw;  justify-self: center; margin-top: 1rem;" class="gap-3">
+            <div class="container teal" style="border: solid black 1px;">
+                <h1 class="text-center fancy">Impossible</h1>
                 <div class="mx-5">
                     <p>(Grandpa talking to his grandson, David, who has been arrested for rape.)</p>
 
@@ -35,12 +35,12 @@
                 </div>
             </div>
 
-            <div class="container">
-                <h1 class="text-center">Homeless</h1>
+            <div class="container teal" style="border: solid black 1px;">
+                <h1 class="text-center fancy ">Homeless</h1>
                 <div class="mx-5">
                     <p>The novel Homeless depicts the lives of seven people from birth through life. Each is selected by the fickle finger of fate and cast into homelessness. Each story is as unique as their names and each will evoke feelings in you which will change the way you view homeless people.</p>
 
-                    <h2>Rose’s Story</h2>
+                    <h2 class="fancy" style="font-size: 25px;">Rose’s Story</h2>
 
                     <p><i>(Rose’s story starts with what she learned of her birth.) </i></p>
 
@@ -48,7 +48,7 @@
 
                     <p>Rose looked at the ceiling in deep thought. “You know, I’m sure my mother loved me! She left that note and a red rose. The policeman who found me started calling me Rose, and they say the name just stuck. I never could find my mother, even when I hired a private detective. There wasn’t a clue as to who she was or why she had to leave me. Not being able to find her has plagued me, but the love reflected in the note and the rose tell me there must have been a compelling reason.”</p>
 
-                    <h2>Kenny Carter’s Story</h2>
+                    <h2 class="fancy" style="font-size: 25px;">Kenny Carter’s Story</h2>
 
                     <p><i>Kenny’s story starts with his dissent into homelessness but reverts to his birth and his assent to the good life. The ending will pleasantly surprise you.</i></p>
 
@@ -62,7 +62,7 @@
 
                     <p>“Well, I’m not sure if that’s the beginning or the end of my story. I guess it depends on your perspective.”</p>
 
-                    <h2>Anna Bell’s Story</h2>
+                    <h2 class="fancy" style="font-size: 25px;">Anna Bell’s Story</h2>
 
                     <p><i>(David on a  cross country summer trip to enroll in college picked up Anna Bell escaping from an abusive father and employer while hitching from Mississippi to California. They made many stops visiting the parks and getting to know each other as their journey progressed. David slept outside giving Anna Bell the bed in the van.)</i></p>
 
@@ -84,8 +84,8 @@
                 </div>
             </div>
 
-            <div class="container">
-                <h1 class="text-center">Hysteria</h1>
+            <div class="container teal" style="border: solid black 1px;">
+                <h1 class="text-center fancy">Hysteria</h1>
                 <div class="mx-5">
                     <p>(Hysteria is the story of a small-town doctor, the leading citizen of his community, suddenly drawn into the Hysteria created by the McMillon cases and its national publicity. I n the flash of an eye, the idyllic life of the doctor and his family is turned upside down.)</p>
 
