@@ -2,8 +2,8 @@
 export default {
     data() {
         return {
-        playVideo1: true,
-        playVideo2: true,
+            playVideo1: true,
+            playVideo2: true,
         };
     },
     methods: {
@@ -27,10 +27,9 @@ export default {
     <div class="py-0 my-0">
         <!-- <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(255, 255, 255); font-size: 90px;">Books </h1> -->
         <div class="row justify-content-center px-0 mx-0 bg-white text-black">
-            <div class="col-12 mx-0 my-0 px-0 py-0" style="overflow-x: hidden;">
-                <!-- <Doors :size="2" :className="'webgl'" :path="'/doors_Impossible.glb'" /> -->
-
-                <video  ref="Video1"  @click="playVideoOne" style="height: 77vh;  display: flex; justify-self: center; overflow: hidden;"><source src="/videos/Impossible.mkv"/></video>
+            <div class="col-12 mx-0 my-0 px-0 py-0" style="overflow-x: hidden; height: 77vh; position: relative;">
+                <div v-show="playVideo1" style="position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);"><h3 class="fancy" >Click To Reveal</h3></div>
+                <video  ref="Video1" @click="playVideoOne" style="height: 100%;  display: flex; justify-self: center; overflow: hidden;"><source src="/videos/Impossible.mkv"/></video>
             </div>
             <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(236, 236, 236); margin-top: -7px">Impossible</h1>
             <div class="row justify-content-center my-auto py-2">
@@ -47,8 +46,9 @@ export default {
 
     <div>
         <div class="row justify-content-center px-0 mx-0 bg-white text-black">
-            <div class="col-12 mx-0 my-0 px-0 py-0" style="overflow-x: hidden;">
-                <video  ref="Video2" @click="playVideoTwo" style="height: 77vh;  display: flex; justify-self: center; overflow: hidden;"><source src="/videos/Homeless.mkv"/></video>
+            <div class="col-12 mx-0 my-0 px-0 py-0" style="overflow-x: hidden; height: 77vh; position: relative;">
+                <div v-show="playVideo2" style="position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);"><h3 class="fancy" >Click To Reveal</h3></div>
+                <video  ref="Video2" @click="playVideoTwo" style="height: 100%;  display: flex; justify-self: center; overflow: hidden;"><source src="/videos/Homeless.mkv"/></video>
             </div>
             <h1 class="text-center mb-0  py-4 fancy"  style="background-color: rgb(236, 236, 236); margin-top: -7px">Homeless</h1>
             <div class="col-7 my-auto=">
