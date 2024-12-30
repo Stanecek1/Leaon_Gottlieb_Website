@@ -1,14 +1,11 @@
-<script setup>
-    import Doors from '../components/Doors.vue'
-    import Doors2 from '../components/Doors2.vue'
-    import Doors3 from '../components/Doors3.vue'
-</script>
 <template>
     <div class="py-0 my-0">
         <!-- <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(255, 255, 255); font-size: 90px;">Books </h1> -->
         <div class="row justify-content-center px-0 mx-0 bg-white text-black">
-            <div class="col-12 mx-0 my-0 px-0 py-0">
-                <Doors :size="2" :className="'webgl'" :path="'/doors_Impossible.glb'" />
+            <div class="col-12 mx-0 my-0 px-0 py-0" style="overflow-x: hidden;">
+                <!-- <Doors :size="2" :className="'webgl'" :path="'/doors_Impossible.glb'" /> -->
+
+                <video  onclick="this.play()" style="height: 77vh;  display: flex; justify-self: center; overflow: hidden;"><source src="/videos/Impossible.mkv"/></video>
             </div>
             <h1 class="text-center py-4 fancy mb-0" style="background-color: rgb(236, 236, 236); margin-top: -7px">Impossible</h1>
             <div class="row justify-content-center my-auto py-2">
@@ -17,7 +14,7 @@
                     <p>How the hell did his sperm get in her vagina and his blood get in her apartment, if he hasn’t been near her for over three months, and has never been in her new apartment? IMPOSSIBLE!</p>
                 </div>
             </div>
-            <div class="col-7 text-center py-5 mb-5">
+            <div class="col-7 text-center py-5">
                   <h2 class="display-7">“You can take the attorney out of the courtroom, but you can’t take the courtroom out of the attorney.”</h2>
             </div>
         </div>
@@ -25,8 +22,8 @@
 
     <div>
         <div class="row justify-content-center px-0 mx-0 bg-white text-black">
-            <div class="col-12 mx-0 my-0 px-0 py-0">
-                <Doors2 :size="2" :className="'webgl2'" :path="'/doors_Homeless.glb'" />
+            <div class="col-12 mx-0 my-0 px-0 py-0" style="overflow-x: hidden;">
+                <video  onclick="this.play()" style="height: 77vh;  display: flex; justify-self: center; overflow: hidden;"><source src="/videos/Homeless.mkv"/></video>
             </div>
             <h1 class="text-center mb-0  py-4 fancy"  style="background-color: rgb(236, 236, 236); margin-top: -7px">Homeless</h1>
             <div class="col-7 my-auto=">
@@ -56,9 +53,4 @@
             </div>
         </div>
     </div> -->
-
-    
-
-
-    
 </template>
