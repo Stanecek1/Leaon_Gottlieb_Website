@@ -12,18 +12,11 @@
             class: "navigation-body",
             elementId: "main-navbar",
             isUsingVueRouter: true,
-            // mobileBreakpoint: 992,
-            // brandImagePath: "./",
-            // brandImage,
-            // brandImageAltText: "brand-image",
-            // collapseButtonOpenColor: "#661c23",
-            // collapseButtonCloseColor: "#661c23",
-            // showBrandImageInMobilePopup: true,
             ariaLabelMainNav: "Main Navigation",
             tooltipAnimationType: "shift-away",
             tooltipPlacement: "bottom",
             background:'#000000',
-            menuOptionsLeft: [
+            menuOptionsRight: [
             {
                 type: "link",
                 text: "Home",
@@ -44,11 +37,6 @@
                 text: "Contact",
                 path: { name: "contact"},
             },
-            // {
-            //     type: "link",
-            //     text: "Shop",
-            //     path: { name: "shop"},
-            // },
             {
                 type: "link",
                 text: "Excerpts",
@@ -72,6 +60,12 @@
       }
     .vnb a {
       color: black;
+    }
+    .vnb__menu-options{
+      padding-left: 0;
+    }
+    .vnb__menu-options .vnb__menu-options--left{
+      padding-left: 0;
     }
 
     
